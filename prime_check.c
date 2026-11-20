@@ -1,20 +1,54 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
-int main(void) {
-    unsigned int n;
-    int prime = 1;
+int main(void)
+{
+    printf("%02d prime_check\n", 36);
+    int values[] = {12, 7, 19, 3, 25, 11, 8};
+    size_t count = sizeof(values) / sizeof(values[0]);
+    long sum = 0;
+    int maximum = values[0];
+    int minimum = values[0];
 
-    if (scanf("%u", &n) != 1 || n < 2) {
-        puts("not prime");
-        return 0;
+    for (size_t i = 0; i < count; ++i)
+    {
+        sum += values[i];
+        if (values[i] > maximum)
+            maximum = values[i];
+        if (values[i] < minimum)
+            minimum = values[i];
     }
 
-    for (unsigned int divisor = 2; divisor <= n / divisor; ++divisor) {
-        if (n % divisor == 0) {
-            prime = 0;
-            break;
+    for (size_t i = 0; i < count; ++i)
+    {
+        for (size_t j = i + 1; j < count; ++j)
+        {
+            if (values[j] < values[i])
+            {
+                int temp = values[i];
+                values[i] = values[j];
+                values[j] = temp;
+            }
         }
     }
-    puts(prime ? "prime" : "not prime");
-    return 0;
+
+    printf("Sum: %ld\n", sum);
+    printf("Maximum: %d\n", maximum);
+    printf("Minimum: %d\n", minimum);
+    printf("Average: %.2f\n", (double)sum / (double)count);
+    printf("Sorted: ");
+    for (size_t i = 0; i < count; ++i)
+        printf("%d%s", values[i], i + 1 == count ? "" : " ");
+    putchar('\n');
+
+    char text[] = "Complete C exercise";
+    size_t letters = 0;
+    for (size_t i = 0; text[i] != '\0'; ++i)
+        if (isalpha((unsigned char)text[i]))
+            ++letters;
+    printf("Letters: %zu\n", letters);
+
+    return EXIT_SUCCESS;
 }

@@ -1,2 +1,52 @@
-﻿#include <stdio.h>
-int main(void){int a[3][3],sum=0;for(int i=0;i<3;i++)for(int j=0;j<3;j++)if(scanf("%d",&a[i][j])!=1)return 1;for(int i=0;i<3;i++)sum+=a[i][i];printf("%d\n",sum);return 0;}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(void)
+{
+    printf("%02d matrix_trace\n", 22);
+    int values[] = {12, 7, 19, 3, 25, 11, 8};
+    size_t count = sizeof(values) / sizeof(values[0]);
+    int sum = 0;
+    int maximum = values[0];
+    int minimum = values[0];
+
+    for (size_t i = 0; i < count; ++i)
+    {
+        sum += values[i];
+        if (values[i] > maximum)
+            maximum = values[i];
+        if (values[i] < minimum)
+            minimum = values[i];
+    }
+
+    for (size_t i = 0; i < count; ++i)
+    {
+        for (size_t j = i + 1; j < count; ++j)
+        {
+            if (values[j] < values[i])
+            {
+                int temp = values[i];
+                values[i] = values[j];
+                values[j] = temp;
+            }
+        }
+    }
+
+    printf("Sum: %d\n", sum);
+    printf("Maximum: %d\n", maximum);
+    printf("Minimum: %d\n", minimum);
+    printf("Sorted: ");
+    for (size_t i = 0; i < count; ++i)
+        printf("%d%s", values[i], i + 1 == count ? "" : " ");
+    putchar('\n');
+
+    char text[] = "C Practice";
+    for (size_t i = 0; text[i] != '\0'; ++i)
+        text[i] = (char)toupper((unsigned char)text[i]);
+    printf("Text: %s\n", text);
+    printf("Bytes: %zu\n", strlen(text));
+
+    return EXIT_SUCCESS;
+}

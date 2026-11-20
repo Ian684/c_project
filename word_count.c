@@ -1,19 +1,54 @@
-#include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
-int main(void) {
-    int character;
-    int in_word = 0;
-    unsigned long words = 0;
+int main(void)
+{
+    printf("%02d word_count\n", 38);
+    int values[] = {12, 7, 19, 3, 25, 11, 8};
+    size_t count = sizeof(values) / sizeof(values[0]);
+    long sum = 0;
+    int maximum = values[0];
+    int minimum = values[0];
 
-    while ((character = getchar()) != EOF) {
-        if (isspace((unsigned char)character)) {
-            in_word = 0;
-        } else if (!in_word) {
-            in_word = 1;
-            ++words;
+    for (size_t i = 0; i < count; ++i)
+    {
+        sum += values[i];
+        if (values[i] > maximum)
+            maximum = values[i];
+        if (values[i] < minimum)
+            minimum = values[i];
+    }
+
+    for (size_t i = 0; i < count; ++i)
+    {
+        for (size_t j = i + 1; j < count; ++j)
+        {
+            if (values[j] < values[i])
+            {
+                int temp = values[i];
+                values[i] = values[j];
+                values[j] = temp;
+            }
         }
     }
-    printf("%lu\n", words);
-    return 0;
+
+    printf("Sum: %ld\n", sum);
+    printf("Maximum: %d\n", maximum);
+    printf("Minimum: %d\n", minimum);
+    printf("Average: %.2f\n", (double)sum / (double)count);
+    printf("Sorted: ");
+    for (size_t i = 0; i < count; ++i)
+        printf("%d%s", values[i], i + 1 == count ? "" : " ");
+    putchar('\n');
+
+    char text[] = "Complete C exercise";
+    size_t letters = 0;
+    for (size_t i = 0; text[i] != '\0'; ++i)
+        if (isalpha((unsigned char)text[i]))
+            ++letters;
+    printf("Letters: %zu\n", letters);
+
+    return EXIT_SUCCESS;
 }
