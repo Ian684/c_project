@@ -16,7 +16,7 @@
 | 02 | 環狀佇列 | [ring_queue.c](practice/ring_queue.c) | main |
 | 03 | 鏈結串列 | [linked_list.c](practice/linked_list.c) | main |
 | 04 | 嚴格整數加總 | [int_sum.c](practice/int_sum.c) | main |
-| 05 | 有界字串複製: snprintf 回傳值判斷截斷 | [05_bounded_copy.c](practice/05_bounded_copy.c) | main |
+| 05 | 有界字串複製: 回傳原始長度，呼叫者可判斷是否截斷 | [05_bounded_copy.c](practice/05_bounded_copy.c) | main |
 | 06 | 原地反轉: 雙指標不越過中點 | [06_reverse_bytes.c](practice/06_reverse_bytes.c) | main |
 | 07 | 回文判定: 空字串與偶數長度 | [07_palindrome.c](practice/07_palindrome.c) | main |
 | 08 | 字串循環移位: 位移對長度取餘數 | [08_rotate_string.c](practice/08_rotate_string.c) | main |

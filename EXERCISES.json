@@ -29,7 +29,7 @@
   },
   {
     "id": 5,
-    "title": "有界字串複製: snprintf 回傳值判斷截斷",
+    "title": "有界字串複製: 回傳原始長度，呼叫者可判斷是否截斷",
     "source": "practice/05_bounded_copy.c",
     "entry": "main",
     "goal": ""
