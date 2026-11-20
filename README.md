@@ -1,5 +1,9 @@
 # C 語言練習
 
+**目前共 50 個實作練習單元。** 完整題號、來源與執行方式見 [CATALOG.md](CATALOG.md)，機器可讀清單見 [EXERCISES.json](EXERCISES.json)。
+
+以下保留起步練習的說明；其餘題目按完整目錄閱讀。
+
 原本 hello.c、malloc.c、StringToOther.c 保留在根目錄。新增 [practice/](practice/) 練習動態配置、指標、環狀索引與嚴格輸入轉型。
 
 需要 C11 編譯器與 Python 3：
@@ -33,3 +37,5 @@ Windows 可執行 vector.exe。check.py 在暫存資料夾編譯。
 輸出 4。若輸入 9223372036854775807 1，stderr 為 sum overflow，結束碼 2。
 
 新增四份練習以 -Werror 編譯並檢查行為；舊範例與舊執行檔保留作紀錄，未宣稱全部經過本次驗證。
+
+題號 13、39、40、41 的檔案 I/O 練習需要一個可覆寫的練習檔路徑；完整測試會傳入獨立暫存路徑，不碰現有資料。

@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "title": "動態陣列",
+    "source": "practice/vector.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 2,
+    "title": "環狀佇列",
+    "source": "practice/ring_queue.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 3,
+    "title": "鏈結串列",
+    "source": "practice/linked_list.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 4,
+    "title": "嚴格整數加總",
+    "source": "practice/int_sum.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 5,
+    "title": "有界字串複製: snprintf 回傳值判斷截斷",
+    "source": "practice/05_bounded_copy.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 6,
+    "title": "原地反轉: 雙指標不越過中點",
+    "source": "practice/06_reverse_bytes.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 7,
+    "title": "回文判定: 空字串與偶數長度",
+    "source": "practice/07_palindrome.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 8,
+    "title": "字串循環移位: 位移對長度取餘數",
+    "source": "practice/08_rotate_string.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 9,
+    "title": "暴力字串搜尋: 最後一個可能起點",
+    "source": "practice/09_substring_search.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 10,
+    "title": "空白分詞計數: unsigned char 與 ctype",
+    "source": "practice/10_word_count.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 11,
+    "title": "字串兩端修剪: memmove 支援重疊",
+    "source": "practice/11_trim_text.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 12,
+    "title": "連續壓縮: 輸出容量與數字寬度",
+    "source": "practice/12_rle.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 13,
+    "title": "CSV 欄位輸出: 引號必須成對跳脫",
+    "source": "practice/13_csv_quote.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 14,
+    "title": "位元組轉十六進位: 一 byte 對兩個 nibble",
+    "source": "practice/14_hex_encode.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 15,
+    "title": "十六進位還原: 非法字元與奇數長度",
+    "source": "practice/15_hex_decode.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 16,
+    "title": "Base64 三位元組: 六位元分組",
+    "source": "practice/16_base64_three.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 17,
+    "title": "設定位元數: 每輪清除最低的 1",
+    "source": "practice/17_popcount.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 18,
+    "title": "奇偶檢查: XOR 累積",
+    "source": "practice/18_parity.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 19,
+    "title": "32 位元循環移位: 避免右移 32 的未定義行為",
+    "source": "practice/19_rotate32.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 20,
+    "title": "大端序封包: 不依賴主機 byte order",
+    "source": "practice/20_network_u32.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 21,
+    "title": "8 位元符號擴展: 以算術表示避免實作定義轉型",
+    "source": "practice/21_signed_byte.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 22,
+    "title": "旗標操作: 設定、切換、清除與測試",
+    "source": "practice/22_bit_flags.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 23,
+    "title": "排序陣列搜尋: 半開區間邊界",
+    "source": "practice/23_binary_search.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 24,
+    "title": "插入排序: 移動元素再放回 key",
+    "source": "practice/24_insertion_sort.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 25,
+    "title": "合併有序序列: 剩餘尾段",
+    "source": "practice/25_merge_sorted.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 26,
+    "title": "排序陣列去重: 讀寫指標分離",
+    "source": "practice/26_dedup_sorted.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 27,
+    "title": "數字頻率: 索引界限與拒絕非法值",
+    "source": "practice/27_histogram.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 28,
+    "title": "前綴和查詢: 前導 0 消除左端特例",
+    "source": "practice/28_prefix_sum.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 29,
+    "title": "矩陣轉置: 連續陣列索引換算",
+    "source": "practice/29_transpose.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 30,
+    "title": "二階矩陣乘法: 累積乘積與輸出初始化",
+    "source": "practice/30_matrix_product.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 31,
+    "title": "質數篩: 從 p*p 開始劃記",
+    "source": "practice/31_prime_sieve.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 32,
+    "title": "歐幾里得演算法: 0 的邊界",
+    "source": "practice/32_gcd.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 33,
+    "title": "非負整數乘法: 乘之前檢查界限",
+    "source": "practice/33_checked_multiply.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 34,
+    "title": "分數約分: 正分母與公因數",
+    "source": "practice/34_reduce_fraction.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 35,
+    "title": "結構排序: 比較器不以相減避免溢位",
+    "source": "practice/35_sort_records.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 36,
+    "title": "標準庫二分搜尋: 空回傳與指標差",
+    "source": "practice/36_stdlib_bsearch.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 37,
+    "title": "完整字串轉型: errno 與尾端字元",
+    "source": "practice/37_strict_strtol.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 38,
+    "title": "欄位寬度讀取: 限制字串大小與檢查轉換數",
+    "source": "practice/38_bounded_scan.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 39,
+    "title": "二進位檔案往返: fwrite/fread 元素數",
+    "source": "practice/39_binary_file.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 40,
+    "title": "檔案行數: 最後一行沒有換行",
+    "source": "practice/40_line_count.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 41,
+    "title": "隨機存取: 位移與 ftell",
+    "source": "practice/41_file_seek.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 42,
+    "title": "固定格式紀錄: 序列化不直接寫 struct padding",
+    "source": "practice/42_portable_record.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 43,
+    "title": "物件表示法: unsigned char 可檢視物件 bytes",
+    "source": "practice/43_byte_representation.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 44,
+    "title": "函式指標表: 操作碼界限",
+    "source": "practice/44_function_dispatch.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 45,
+    "title": "狀態機: 狀態轉移與非法事件",
+    "source": "practice/45_state_machine.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 46,
+    "title": "小型集合: 位元位置與範圍",
+    "source": "practice/46_bitset.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 47,
+    "title": "固定物件池: 配置失敗與歸還重用",
+    "source": "practice/47_object_pool.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 48,
+    "title": "最小堆積: 上浮與下沉",
+    "source": "practice/48_min_heap.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 49,
+    "title": "圖最短步數: 入列就標記",
+    "source": "practice/49_graph_bfs.c",
+    "entry": "main",
+    "goal": ""
+  },
+  {
+    "id": 50,
+    "title": "最少硬幣: 狀態初始化與無解",
+    "source": "practice/50_coin_dp.c",
+    "entry": "main",
+    "goal": ""
+  }
+]
