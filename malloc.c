@@ -6,11 +6,8 @@
 
 
 int main(){
-	int *a = malloc(sizeof(int) * 0x10);
-	if (a == NULL) {
-		return 1;
-	}
-	memset(a, 0, sizeof(int) * 0x10);
+	int * a = malloc(sizeof(int) * 0x10);
+	memset(a , 0 , sizeof(a));
 	*(a) = 0;
 	*(a+1) = 1;
 	*(a+2) = 2;
