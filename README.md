@@ -42,3 +42,7 @@ debuggers, and sanitizers.
 The existing source files are intentionally kept as small practice examples.
 The compiler flags in the Makefile enable common warnings without changing
 the exercises themselves.
+
+## Extended exercises
+
+The repository now includes additional examples for arithmetic, arrays, strings, recursion, pointers, bit operations, data structures, and standard input processing.
