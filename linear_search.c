@@ -3,50 +3,32 @@
 #include <string.h>
 #include <ctype.h>
 
+struct record {
+    int id;
+    int value;
+};
+
+static void exercise_23(struct record *records, size_t count)
+{
+    int sum = 0;
+    int maximum = count ? records[0].value : 0;
+    int minimum = count ? records[0].value : 0;
+    for (size_t index = 0; index < count; ++index) {
+        sum += records[index].value;
+        if (records[index].value > maximum) maximum = records[index].value;
+        if (records[index].value < minimum) minimum = records[index].value;
+    }
+    printf("linear_search: sum=%d max=%d min=%d count=%zu\n",
+           sum, maximum, minimum, count);
+}
+
 int main(void)
 {
-    printf("%02d linear_search\n", 21);
-    int values[] = {12, 7, 19, 3, 25, 11, 8};
-    size_t count = sizeof(values) / sizeof(values[0]);
-    int sum = 0;
-    int maximum = values[0];
-    int minimum = values[0];
-
-    for (size_t i = 0; i < count; ++i)
-    {
-        sum += values[i];
-        if (values[i] > maximum)
-            maximum = values[i];
-        if (values[i] < minimum)
-            minimum = values[i];
-    }
-
-    for (size_t i = 0; i < count; ++i)
-    {
-        for (size_t j = i + 1; j < count; ++j)
-        {
-            if (values[j] < values[i])
-            {
-                int temp = values[i];
-                values[i] = values[j];
-                values[j] = temp;
-            }
-        }
-    }
-
-    printf("Sum: %d\n", sum);
-    printf("Maximum: %d\n", maximum);
-    printf("Minimum: %d\n", minimum);
-    printf("Sorted: ");
-    for (size_t i = 0; i < count; ++i)
-        printf("%d%s", values[i], i + 1 == count ? "" : " ");
-    putchar('\n');
-
-    char text[] = "C Practice";
-    for (size_t i = 0; text[i] != '\0'; ++i)
-        text[i] = (char)toupper((unsigned char)text[i]);
-    printf("Text: %s\n", text);
-    printf("Bytes: %zu\n", strlen(text));
-
+    struct record records[] = {
+        {1, 12}, {2, 7}, {3, 19}, {4, 3}, {5, 25}, {6, 11}, {7, 8}
+    };
+    size_t count = sizeof(records) / sizeof(records[0]);
+    printf("linear_search: search each element in sequence\n");
+    exercise_23(records, count);
     return EXIT_SUCCESS;
 }
