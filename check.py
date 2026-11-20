@@ -19,4 +19,4 @@ with tempfile.TemporaryDirectory() as temporary:
         result = subprocess.run([executable, *args], capture_output=True, text=True)
         assert result.returncode == status and result.stdout.strip() == output, (args, result)
 assert len(executables) == 50
-print('50 C programs: build, behavior and overflow checks passed')
+print('C programs: build, behavior and overflow checks passed')
