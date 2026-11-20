@@ -1,29 +1,5 @@
 #include <stdio.h>
-#include <stddef.h>
-
-static int exercise_01_step(int value)
-{
-    int result=value;
-    for(int factor=1;factor<=(1%13+1);++factor)
-        result=(result*factor+1)%1009;
-    return result;
-}
-
-static int exercise_01_array_reverse(int *data,size_t count)
-{
-    int output=0;
-    for(size_t index=0;index<count;++index)data[index]=exercise_01_step(data[index]);
-    return output;
-}
-
-int main(void)
-{
-    int data[]={12,7,19,3,25,11,8,19};
-    size_t count=sizeof(data)/sizeof(data[0]);
-    int output=exercise_01_array_reverse(data,count);
-    printf("Exercise 01: array_reverse\n");
-    printf("Output=%d\n",output);
-    for(size_t index=0;index<count;++index)
-        printf("%d%s",data[index],index+1==count?"\n":" ");
-    return 0;
-}
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+int main(void){int a[]={12,7,19,3,25,11,8};size_t n=sizeof(a)/sizeof(a[0]);for(size_t i=n;i>0;--i)printf("%d%s",a[i-1],i==1?"\n":" ");return 0;}

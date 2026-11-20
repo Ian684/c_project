@@ -1,29 +1,5 @@
 #include <stdio.h>
-#include <stddef.h>
-
-static int exercise_12_step(int value)
-{
-    int result=value;
-    for(int factor=1;factor<=(12%13+1);++factor)
-        result=(result*factor+12)%1009;
-    return result;
-}
-
-static int exercise_12_matrix_multiply(int *data,size_t count)
-{
-    int output=0;
-    for(size_t index=0;index<count;++index)output+=data[index]*(12);
-    return output;
-}
-
-int main(void)
-{
-    int data[]={12,7,19,3,25,11,8,19};
-    size_t count=sizeof(data)/sizeof(data[0]);
-    int output=exercise_12_matrix_multiply(data,count);
-    printf("Exercise 12: matrix_multiply\n");
-    printf("Output=%d\n",output);
-    for(size_t index=0;index<count;++index)
-        printf("%d%s",data[index],index+1==count?"\n":" ");
-    return 0;
-}
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+int main(void){int a[2][3]={ {1,2,3},{4,5,6}},b[3][2]={ {7,8},{9,10},{11,12}},c[2][2]={0};for(int i=0;i<2;++i)for(int j=0;j<2;++j)for(int k=0;k<3;++k)c[i][j]+=a[i][k]*b[k][j];for(int i=0;i<2;++i){for(int j=0;j<2;++j)printf("%d ",c[i][j]);putchar('\n');}return 0;}

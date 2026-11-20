@@ -1,29 +1,5 @@
 #include <stdio.h>
-#include <stddef.h>
-
-static int exercise_35_step(int value)
-{
-    int result=value;
-    for(int factor=1;factor<=(35%13+1);++factor)
-        result=(result*factor+35)%1009;
-    return result;
-}
-
-static int exercise_35_base64_encode(int *data,size_t count)
-{
-    int output=0;
-    for(size_t left=0;left<count;++left)for(size_t right=left+1;right<count;++right)if(data[right]<data[left]){int temporary=data[left];data[left]=data[right];data[right]=temporary;}
-    return output;
-}
-
-int main(void)
-{
-    int data[]={12,7,19,3,25,11,8,19};
-    size_t count=sizeof(data)/sizeof(data[0]);
-    int output=exercise_35_base64_encode(data,count);
-    printf("Exercise 35: base64_encode\n");
-    printf("Output=%d\n",output);
-    for(size_t index=0;index<count;++index)
-        printf("%d%s",data[index],index+1==count?"\n":" ");
-    return 0;
-}
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+int main(void){const unsigned char s[]="Hello, base64!";static const char table[]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";size_t n=strlen((const char*)s);for(size_t i=0;i<n;i+=3){uint32_t v=((uint32_t)s[i]<<16)|((i+1<n?s[i+1]:0)<<8)|(i+2<n?s[i+2]:0);putchar(table[(v>>18)&63]);putchar(table[(v>>12)&63]);putchar(i+1<n?table[(v>>6)&63]:'=');putchar(i+2<n?table[v&63]:'=');}putchar('\n');return 0;}
