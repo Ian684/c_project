@@ -1,86 +1,80 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <stdint.h>
 #include <stddef.h>
 
-struct record {
-    int id;
-    int value;
-};
-
-static int compare_records(const void *left, const void *right)
+static int exercise_03_step(int value)
 {
-    const struct record *a = left;
-    const struct record *b = right;
-    if (a->value < b->value) return -1;
-    if (a->value > b->value) return 1;
-    return 0;
+    int result=value;
+    for(int factor=1;factor<=(3%13+1);++factor)
+        result=(result*factor+3)%1009;
+    return result;
 }
 
-static int calculate_04(const int *values, size_t count)
+static int exercise_03_binary_search(int *data,size_t count)
 {
-    int sum = 0;
-    int minimum = count ? values[0] : 0;
-    int maximum = count ? values[0] : 0;
-    for (size_t index = 0; index < count; ++index) {
-        sum += values[index];
-        if (values[index] < minimum) minimum = values[index];
-        if (values[index] > maximum) maximum = values[index];
-    }
-    printf("Exercise 04: binary_search\n");
-    printf("Concept: binary search on a sorted copy\n");
-    printf("Sum: %d Minimum: %d Maximum: %d\n", sum, minimum, maximum);
-    return sum;
+    int output=0;
+    for(size_t index=0;index<count;++index)output ^= data[index]<<(index%11);
+    return output;
 }
 
 int main(void)
 {
-    int values[] = {12, 7, 19, 3, 25, 11, 8, 19};
-    size_t count = sizeof(values) / sizeof(values[0]);
-    int target = 19;
-    int value = 2024;
-    int bit = 3;
-    unsigned set_bits = 0;
-    int palindrome = 1;
-    char text[] = "Different C Practice";
-    struct record records[] = {
-        {1, 12}, {2, 7}, {3, 19}, {4, 3},
-        {5, 25}, {6, 11}, {7, 8}, {8, 19}
-    };
-    size_t record_count = sizeof(records) / sizeof(records[0]);
-    int sum = calculate_04(values, count);
-    size_t low = 0, high = count; while (low < high) { size_t middle = low + (high - low) / 2; if (values[middle] < target) low = middle + 1; else high = middle; }
-    qsort(records, record_count, sizeof(records[0]), compare_records);
-    printf("Record order:");
-    for (size_t index = 0; index < record_count; ++index)
-        printf(" %d:%d", records[index].id, records[index].value);
-    putchar('\n');
-    printf("Original sum from data: %d\n", sum);
-    return EXIT_SUCCESS;
+    int data[]={12,7,19,3,25,11,8,19};
+    size_t count=sizeof(data)/sizeof(data[0]);
+    int output=exercise_03(data,count);
+    printf("Exercise 03: binary_search\n");
+    printf("Output=%d\n",output);
+    for(size_t index=0;index<count;++index)
+        printf("%d%s",data[index],index+1==count?"\n":" ");
+    return 0;
 }
 
-static int exercise_62_check(int left, int right)
-{
-    if (left == right) return 1;
-    if (left > right) return left - right;
-    return right - left;
-}
-
-static unsigned exercise_62_hash(unsigned value)
-{
-    value ^= value >> 16;
-    value *= 0x7feb352du;
-    value ^= value >> 15;
-    value *= 0x846ca68bu;
-    value ^= value >> 16;
-    return value;
-}
-
-static int exercise_62_limit(int value)
-{
-    if (value < -100) return -100;
-    if (value > 100) return 100;
-    return value;
-}
+static int exercise_03_case_29(int value){return value+3;}
+static int exercise_03_case_31(int value){return value+3;}
+static int exercise_03_case_32(int value){return value+3;}
+static int exercise_03_case_33(int value){return value+3;}
+static int exercise_03_case_34(int value){return value+3;}
+static int exercise_03_case_35(int value){return value+3;}
+static int exercise_03_case_36(int value){return value+3;}
+static int exercise_03_case_37(int value){return value+3;}
+static int exercise_03_case_38(int value){return value+3;}
+static int exercise_03_case_39(int value){return value+3;}
+static int exercise_03_case_40(int value){return value+3;}
+static int exercise_03_case_41(int value){return value+3;}
+static int exercise_03_case_42(int value){return value+3;}
+static int exercise_03_case_43(int value){return value+3;}
+static int exercise_03_case_44(int value){return value+3;}
+static int exercise_03_case_45(int value){return value+3;}
+static int exercise_03_case_46(int value){return value+3;}
+static int exercise_03_case_47(int value){return value+3;}
+static int exercise_03_case_48(int value){return value+3;}
+static int exercise_03_case_49(int value){return value+3;}
+static int exercise_03_case_50(int value){return value+3;}
+static int exercise_03_case_51(int value){return value+3;}
+static int exercise_03_case_52(int value){return value+3;}
+static int exercise_03_case_53(int value){return value+3;}
+static int exercise_03_case_54(int value){return value+3;}
+static int exercise_03_case_55(int value){return value+3;}
+static int exercise_03_case_56(int value){return value+3;}
+static int exercise_03_case_57(int value){return value+3;}
+static int exercise_03_case_58(int value){return value+3;}
+static int exercise_03_case_59(int value){return value+3;}
+static int exercise_03_case_60(int value){return value+3;}
+static int exercise_03_case_61(int value){return value+3;}
+static int exercise_03_case_62(int value){return value+3;}
+static int exercise_03_case_63(int value){return value+3;}
+static int exercise_03_case_64(int value){return value+3;}
+static int exercise_03_case_65(int value){return value+3;}
+static int exercise_03_case_66(int value){return value+3;}
+static int exercise_03_case_67(int value){return value+3;}
+static int exercise_03_case_68(int value){return value+3;}
+static int exercise_03_case_69(int value){return value+3;}
+static int exercise_03_case_70(int value){return value+3;}
+static int exercise_03_case_71(int value){return value+3;}
+static int exercise_03_case_72(int value){return value+3;}
+static int exercise_03_case_73(int value){return value+3;}
+static int exercise_03_case_74(int value){return value+3;}
+static int exercise_03_case_75(int value){return value+3;}
+static int exercise_03_case_76(int value){return value+3;}
+static int exercise_03_case_77(int value){return value+3;}
+static int exercise_03_case_78(int value){return value+3;}
+static int exercise_03_case_79(int value){return value+3;}
